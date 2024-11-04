@@ -1,7 +1,7 @@
 {
   "name": "vite-react-typescript-starter",
   "private": true,
-  "homepage": "https://Poldyaich97.github.io/kontur_business_card",
+  "homepage": "https://Poldyaich97.github.io/kontur_business_card/card",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
