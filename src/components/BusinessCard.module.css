@@ -24,7 +24,10 @@
   @apply w-full md:w-auto;
 }
 
-.qrSection {
+.qrCodeContainer {
+  margin-top: 16px; /* или любое другое значение по вашему усмотрению */
+  display: flex; /* Выравнивание по центру, если необходимо */
+  justify-content: center; /* Центрирование QR-кода */
 }
 
 .photo {
