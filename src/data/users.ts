@@ -16,7 +16,7 @@ export const users: User[] = [
     phone: "+7 (967) 853-28-13",
     email: "poldyaev@skbkontu.ru",
     photo: "https://github.com/Poldyaich97/kontur_business_card/blob/main/src/data/1.png?raw=true",
-    qr: ""
+    qr: "https://github.com/Poldyaich97/kontur_business_card/blob/main/src/data/qr1.png?raw=true"
   },
   {
     id: 2,
@@ -24,6 +24,7 @@ export const users: User[] = [
     position: "Русаков Дмитрий Александрович",
     phone: "+7 (909) 003-22-76",
     email: "rusakov_da@skbkontur.ru",
-    photo: "https://github.com/Poldyaich97/kontur_business_card/blob/main/src/data/2.png?raw=true"
+    photo: "https://github.com/Poldyaich97/kontur_business_card/blob/main/src/data/2.png?raw=true",
+    qr: "https://github.com/Poldyaich97/kontur_business_card/blob/main/src/data/qr1.png?raw=true"
   }
 ];
