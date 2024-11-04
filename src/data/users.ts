@@ -25,6 +25,6 @@ export const users: User[] = [
     phone: "+7 (909) 003-22-76",
     email: "rusakov_da@skbkontur.ru",
     photo: "https://github.com/Poldyaich97/kontur_business_card/blob/main/src/data/2.png?raw=true",
-    qr: "https://github.com/Poldyaich97/kontur_business_card/blob/main/src/data/qr1.png?raw=true"
+    qr: "https://github.com/Poldyaich97/kontur_business_card/blob/main/src/data/qr2.png?raw=true"
   }
 ];
