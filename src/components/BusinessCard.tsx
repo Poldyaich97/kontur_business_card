@@ -89,6 +89,7 @@ const transliterate = (text: string): string => {
 export const BusinessCard: React.FC<BusinessCardProps> = ({ user }) => {
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({ name: "", phone: "" });
+  const [showQRCode, setShowQRCode] = useState(false); // Добавлено состояние для QR-кода
   const { addRequest } = useCardRequests();
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -142,14 +143,24 @@ END:VCARD`;
           </div>
         </div>
 
-        {/* Отображаем QR-код */}
-        <div className={styles.qrCodeContainer}>
-          <QRCode value={vCard} size={128} />
-        </div>
+        {/* Кнопка для отображения QR-кода */}
+        <button
+          onClick={() => setShowQRCode(!showQRCode)}
+          className={styles.qrButton} // Указали отдельный класс для QR-кнопки
+        >
+          {showQRCode ? "Скрыть QR" : "Показать QR"}
+        </button>
+
+        {/* Условное отображение QR-кода */}
+        {showQRCode && (
+          <div className={styles.qrCodeContainer}>
+            <QRCode value={vCard} size={128} />
+          </div>
+        )}
 
         <button
           onClick={() => setShowModal(true)}
-          className={styles.requestButton}
+          className={styles.requestButton} // Класс для кнопки "Хочу визитку"
         >
           Хочу визитку
         </button>

@@ -13,6 +13,7 @@
 
 .content {
   @apply flex flex-col md:flex-row gap-4 sm:gap-6 md:gap-8;
+  margin-bottom: 10px;
 }
 
 .photoSection {
@@ -28,6 +29,10 @@
   margin-top: 16px; /* или любое другое значение по вашему усмотрению */
   display: flex; /* Выравнивание по центру, если необходимо */
   justify-content: center; /* Центрирование QR-кода */
+}
+.qrButton {
+  margin-bottom: 16px; /* Отступ снизу, чтобы отодвинуть от кнопки "Хочу визитку" */
+  margin-right: 10px;
 }
 
 .photo {
@@ -58,10 +63,86 @@
 }
 
 .requestButton {
-  @apply mt-4; /* Добавить отступ сверху */
-  @apply px-3 py-1.5 text-sm font-medium;
-  @apply bg-blue-600 text-white rounded-lg;
-  @apply hover:bg-blue-500 transition-colors duration-200;
-  @apply shadow-lg hover:shadow-xl;
-  @apply transform hover:scale-105 transition-transform;
+  position: fixed; /* Закрепляем кнопку на экране */
+  right: 16px; /* Отступ от правого края экрана */
+  bottom: 16px; /* Отступ от нижнего края экрана */
+  padding: 12px 20px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+
+  /* Эффект при наведении */
+  &:hover {
+    background-color: #005bb5;
+  }
+}
+
+/* Стили для кнопки "Хочу визитку" в правом нижнем углу */
+.requestButton {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  padding: 12px 20px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.requestButton:hover {
+  background-color: #005bb5;
+}
+
+/* Стили для кнопки "QR", чтобы она оставалась на своём месте */
+.qrButton {
+  margin-bottom: 16px;
+  padding: 8px 16px;
+  background-color: #4a4a4a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.qrButton:hover {
+  background-color: #6a6a6a;
+}
+
+/* Медиазапрос для маленьких экранов */
+@media (max-width: 375px) {
+  .requestButton {
+    bottom: 8px; /* Поднимаем кнопку выше, чтобы она не наезжала на QR-код */
+    padding: 10px 16px; /* Уменьшаем размер для компактности */
+    font-size: 14px;
+  }
+}
+
+.requestButton:hover {
+  background-color: #005bb5;
+}
+
+/* Стили для кнопки "QR", чтобы она оставалась на своём месте */
+.qrButton {
+  margin-bottom: 16px; /* Добавьте отступ или другие стили по необходимости */
+  padding: 8px 16px;
+  background-color: #4a4a4a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.qrButton:hover {
+  background-color: #6a6a6a;
 }
